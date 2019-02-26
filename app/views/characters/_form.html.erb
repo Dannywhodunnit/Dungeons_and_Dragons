@@ -1,0 +1,155 @@
+<%= form_with model: @character, local: true do |form| %>
+<% if @character.errors.any? %>
+
+<h4>
+    <%= pluralize(@character.errors.count, "error") %> stopped this from being saved
+</h4>
+<ul>
+    <%= character.errors.full_messages.each do |msg|%>
+    <li><% msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<h1>Create a Character</h1>
+<p>
+    <%= form.label :name %><br />
+    <%= form.text_field :name %>
+</p><br />
+<p>
+    <%= form.label :level %><br />
+    <%= form.text_field :level %>
+</p><br />
+<p>
+    <%= form.label :gender %><br />
+    <%= form.text_field :gender %>
+</p><br />
+<p>
+    <%= form.label :alignment %><br />
+    <%= form.text_field :alignment %>
+</p><br />
+<p>
+    <%= form.label :real_age %><br />
+    <%= form.text_field :real_age %>
+</p><br />
+<p>
+    <%= form.label :height %><br />
+    <%= form.text_field :height %>
+</p><br />
+<p>
+    <%= form.label :weight %><br />
+    <%= form.text_field :weight %>
+</p><br />
+<p>
+    <%= form.label :xp %><br />
+    <%= form.text_field :xp %>
+</p><br />
+<p>
+    <%= form.label :hp %><br />
+    <%= form.text_field :hp %>
+</p><br />
+<p>
+    <%= form.label :race %><br />
+    <%= form.text_field :race %>
+</p><br />
+<p>
+    <%= form.label :backstory %><br />
+    <%= form.text_field :backstory %>
+</p><br />
+<p>
+    <%= form.label :appearance %><br />
+    <%= form.text_field :appearance %>
+</p><br />
+<p>
+    <%= form.label :personality_traits %><br />
+    <%= form.text_field :personality_traits %>
+</p><br />
+<p>
+    <%= form.label :ideals %><br />
+    <%= form.text_field :ideals %>
+</p><br />
+<p>
+    <%= form.label :bonds %><br />
+    <%= form.text_field :bonds %>
+</p><br />
+<p>
+    <%= form.label :flaws %><br />
+    <%= form.text_field :flaws %>
+</p><br />
+<p>
+    <%= form.label :class %><br />
+    <%= form.text_field :class %>
+</p><br />
+<p>
+    <%= form.label :background %><br />
+    <%= form.text_field :background %>
+</p><br />
+
+<!--scoring ability
+    (strength, dexterity, constitution,
+    intelligence, wisdom, charisma)
+    6 scores customized by user default at 10
+    with additional 12 points to utilize
+    can add and subtract from default value
+    race bonus is possible
+    show final score of each
+    cost to increase score increases
+    specific to how many times said specific score
+    is increased (costs more points to upgrade
+    already upgraded scores)
+
+    work on later, something crude for now
+    -->
+<p>
+    <%= form.label :best_ability %><br />
+    <%= form.text_field :best_ability %>
+</p><br />
+<p>
+    <%= form.label :class_feature %><br />
+    <%= form.text_field :class_feature %>
+</p><br />
+<p>
+    <%= form.label :class_skill1 %><br />
+    <%= form.text_field :class_skill1 %>
+</p><br />
+<p>
+    <%= form.label :class_skill2 %><br />
+    <%= form.text_field :class_skill2 %>
+</p><br />
+<p>
+    <%= form.label :background_skill %><br />
+    <%= form.text_field :background_skill %>
+</p><br />
+<p>
+    <%= form.label :background_tools1 %><br />
+    <%= form.text_field :background_tools1 %>
+</p><br />
+<p>
+    <%= form.label :background_tools2 %><br />
+    <%= form.text_field :background_tools2 %>
+</p><br />
+<p>
+    <%= form.label :race_languages %><br />
+    <%= form.text_field :race_languages %>
+</p><br />
+<p>
+    <%= form.label :fighting_style %><br />
+    <%= form.text_field :fighting_style %>
+</p><br />
+<p>
+    <%= form.label :starter_pack %><br />
+    <%= form.text_field :starter_pack %>
+</p><br />
+<p>
+    <%= form.label :background_specialty %><br />
+    <%= form.text_field :background_specialty %>
+</p><br />
+<p>
+    <%= form.label :known_spells %><br />
+    <%= form.text_field :known_spells %>
+</p><br />
+<!-- leave room for indepth additions for equipment
+    (Armors, Weapons, Tools, Money, Treasures &
+    Magic Items, Equipment, Particularities)-->
+	<%= form.submit %>
+<% end %>
