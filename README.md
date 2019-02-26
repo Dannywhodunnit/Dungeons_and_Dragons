@@ -1,11 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a character creator for Dungeons and Dragons. Fill out the form to create or update, delete, or look up characters created.
 
-Things you may want to cover:
 
-* Ruby version
+
+* Ruby version - Running Ruby 2.5.3
 
 * System dependencies
 
