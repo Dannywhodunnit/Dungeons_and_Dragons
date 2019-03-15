@@ -10,8 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+      <div class="content">
+          <div class="row">
+              <div class="col-md-2">
+              </div>
+          </div>
+      </div>
+      <%= yield %>
+
+      <footer><%= link_to "Home", root_path %></footer>
   </body>
 
-  <foot><%= link_to "Home", root_path %></foot>
+  
 </html>

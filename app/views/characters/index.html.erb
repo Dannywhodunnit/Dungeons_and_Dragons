@@ -5,7 +5,7 @@
 	<li>
 		<%= link_to(character.name, character_path(character)) %>
 		<%= link_to("Edit", edit_character_path(character)) %>
-		<%= link_to("Delete", character_path, method: :delete, data: {confirm: "This is final, are you certain?" }) %>
+		<%= link_to("Delete", character_path(character), method: :delete, data: {confirm: "This is final, are you certain?" }) %>
 	</li>
 	<% end %>
 

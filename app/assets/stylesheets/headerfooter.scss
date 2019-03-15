@@ -1,0 +1,38 @@
+header, footer {
+    border: 20px solid #800000;
+    clear: both;
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+header {
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #800000;
+    font-weight: bolder;
+    font-size: xx-large;
+    }
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}

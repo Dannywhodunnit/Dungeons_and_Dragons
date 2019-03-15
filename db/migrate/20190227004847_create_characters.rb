@@ -17,7 +17,7 @@ class CreateCharacters < ActiveRecord::Migration[5.2]
 			t.string :ideals
 			t.string :bonds
 			t.string :flaws
-			t.string :class
+			t.string :character_class
 			t.string :background
 			t.string :best_ability
 			t.string :class_feature

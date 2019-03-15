@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_02_27_004847) do
     t.string "ideals"
     t.string "bonds"
     t.string "flaws"
-    t.string "class"
+    t.string "character_class"
     t.string "background"
     t.string "best_ability"
     t.string "class_feature"

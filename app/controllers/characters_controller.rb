@@ -13,7 +13,7 @@ class CharactersController < ApplicationController
 
 	def create
 		params.require(:character).permit!
-		@character = Character.new(params[:book])
+		@character = Character.new(params[:character])
 		if @character.save
 			redirect_to character_path(@character)
 		end
@@ -25,7 +25,7 @@ class CharactersController < ApplicationController
 
 	def update
 		@character = Character.find(params[:id])
-		if @character.update(book_params)
+		if @character.update(character_params)
 			redirect_to @character
 		else
 			render 'edit'

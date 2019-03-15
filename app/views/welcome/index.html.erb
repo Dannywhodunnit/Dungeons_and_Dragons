@@ -1,5 +1,10 @@
-<h1><strong>Dungeons and Dragons Character Roster</strong></h1>
+<%= stylesheet_link_tag "headerfooter" %>
+<header>
+    <h1><strong>Dungeons and Dragons: Party Tools </strong></h1>
+</header>
+    <h3>Summon your players, gather your party!</h3>
 
-<h3>Summon your players, gather your party!</h3>
+<p><%= link_to 'Create new character', new_character_path %></p>
+<%= link_to "view characters", :controller=>"characters" %>
 
 

@@ -1,33 +1,40 @@
 <h1><%= @character.name%></h1>
-detail
+<h3><b><u>General</u></b></h3>
 <ul>
-    <li>Level:</li>
-    <li>Gender:</li>
-    <li>Alignment:</li>
-    <li>Real Age:</li>
-    <li>Height:</li>
-    <li>Weight:</li>
-    <li>XP:</li>
-    <li>HP:</li>
-    <li>Race:</li>
-    <li>Backstory:</li>
-    <li>Appearance:</li>
-    <li>Personality Traits:</li>
-    <li>Ideals:</li>
-    <li>Flaws:</li>
-    <li>Bonds:</li>
-    <li>Class:</li>
-    <li>Background:</li>
-    <li>Best Ability:</li>
-    <li>Class Feature:</li>
-    <li>Class Skill 1:</li>
-    <li>Class Skill 2:</li>
-    <li>Background Skill:</li>
-    <li>Background Tools 1:</li>
-    <li>Background Tools 2:</li>
-    <li>Race Languages:</li>
-    <li>Fighting Style:</li>
-    <li>Starter Pack:</li>
-    <li>Background Specialty:</li>
-    <li>Known Spells:</li>
+
+    <li><b><u>Level:</u></b> <%= @character.level %></li>
+    <li><b><u>Race:</u></b> <%= @character.race %></li>
+    <li><b><u>Class:</u></b> <%= @character.character_class %></li>
+    <li><b><u>Gender:</u></b> <%= @character.gender %></li>
+    <li><b><u>Alignment:</u></b> <%= @character.alignment %></li>
+    <li><b><u>Real Age:</u></b> <%= @character.real_age %></li>
+    <li><b><u>Height:</u></b> <%= @character.height %></li>
+    <li><b><u>Weight:</u></b> <%= @character.weight %></li>
+    <li><b><u>XP:</u></b> <%= @character.xp %></li>
+    <li><b><u>HP:</u></b> <%= @character.hp %></li>
 </ul>
+
+<h3><b><u>Details</u></b></h3>
+
+    <li><b><u>Backstory:</u></b> <%= @character.backstory %></li>
+    <li><b><u>Appearance:</u></b> <%= @character.appearance %></li>
+    <li><b><u>Personality Traits:</u></b> <%= @character.personality_traits %></li>
+    <li><b><u>Ideals:</u></b> <%= @character.ideals %></li>
+    <li><b><u>Flaws:</u></b> <%= @character.flaws %></li>
+    <li><b><u>Bonds:</u></b> <%= @character.bonds %></li>
+    <li><b><u>Background:</u></b> <%= @character.background %></li>
+    <li><b><u>Best Ability:</u></b> <%= @character.best_ability %></li>
+    <li><b><u>Class Feature:</u></b> <%= @character.class_feature %></li>
+    <li><b><u>Class Skill 1:</u></b> <%= @character.class_skill1 %></li>
+    <li><b><u>Class Skill 2:</u></b> <%= @character.class_skill2 %></li>
+    <li><b><u>Background Skill:</u></b> <%= @character.background_skill %></li>
+
+<h3><b><u>Resources</u></b></h3>
+
+    <li><b><u>Background Tools 1:</u></b> <%= @character.background_tools1 %></li>
+    <li><b><u>Background Tools 2:</u></b> <%= @character.background_tools2 %></li>
+    <li><b><u>Race Languages:</u></b> <%= @character.race_languages %></li>
+    <li><b><u>Fighting Style:</u></b> <%= @character.fighting_style %></li>
+    <li><b><u>Starter Pack:</u></b> <%= @character.starter_pack %></li>
+    <li><b><u>Background Specialty:</u></b> <%= @character.background_specialty %></li>
+    <li><b><u>Known Spells:</u></b> <%= @character.known_spells %></li>
