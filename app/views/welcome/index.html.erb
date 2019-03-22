@@ -1,10 +1,14 @@
 <%= stylesheet_link_tag "headerfooter" %>
+<%= stylesheet_link_tag "basics" %>
+
 <header>
-    <h1><strong>Dungeons and Dragons: Party Tools </strong></h1>
+    <h2><strong>D&D Resources</strong></h2>
 </header>
+    <div class="text-center">
+    <h1>Dungeons and Dragons: Party Tools</h1>
     <h3>Summon your players, gather your party!</h3>
 
-<p><%= link_to 'Create new character', new_character_path %></p>
-<%= link_to "view characters", :controller=>"characters" %>
-
+    <p><%= link_to 'Create new character', new_character_path %></p>
+    <%= link_to "view characters", :controller=>"characters" %>
+    </div>
 

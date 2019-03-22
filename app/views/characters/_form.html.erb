@@ -1,5 +1,6 @@
 <%= form_with model: @character, local: true do |form| %>
 <% if @character.errors.any? %>
+<%= stylesheet_link_tag "headerfooter" %>
 
 <h4>
     <%= pluralize(@character.errors.count, "error") %> stopped this from being saved

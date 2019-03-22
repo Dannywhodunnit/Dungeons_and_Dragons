@@ -1,7 +1,18 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\app\\assets",
+    "\\app\\assets\\stylesheets",
+    "\\app\\models",
+    "\\app\\views",
+    "\\app\\views\\characters",
+    "\\app\\views\\layouts",
+    "\\app\\views\\welcome",
+    "\\config",
+    "\\config\\initializers",
+    "\\db"
   ],
-  "SelectedNode": "\\Gemfile",
+  "SelectedNode": "\\app\\views\\characters\\_form.html.erb",
   "PreviewInSolutionExplorer": false
 }
