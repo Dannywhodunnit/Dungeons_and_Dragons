@@ -1,3 +1,13 @@
-* {
-    background-color: darkgoldenrod;
+/*project wide stylings for background image/coloring, common text styling*/
+
+html {
+    height: 100%;
+    background: linear-gradient(gold, orange, maroon) fixed;
+    background-repeat: no-repeat;
 }
+
+h1, h3, h4 {
+    text-align: center;
+}
+
+  

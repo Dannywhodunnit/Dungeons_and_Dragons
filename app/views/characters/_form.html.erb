@@ -1,7 +1,10 @@
+<!-- form used for both Create and Edit pages, separating into three sections (General, Resources, and Details) -->
 <%= form_with model: @character, local: true do |form| %>
 <% if @character.errors.any? %>
 <%= stylesheet_link_tag "headerfooter" %>
+<%= stylesheet_link_tag "form" %>
 
+<!-- Catch any errors and list all to the user -->
 <h4>
     <%= pluralize(@character.errors.count, "error") %> stopped this from being saved
 </h4>
@@ -12,145 +15,158 @@
 </ul>
 <% end %>
 
-<h1>Create a Character</h1>
-<p>
-    <%= form.label :name %><br />
-    <%= form.text_field :name %>
-</p><br />
-<p>
-    <%= form.label :level %><br />
-    <%= form.text_field :level %>
-</p><br />
-<p>
-    <%= form.label :gender %><br />
-    <%= form.text_field :gender %>
-</p><br />
-<p>
-    <%= form.label :alignment %><br />
-    <%= form.text_field :alignment %>
-</p><br />
-<p>
-    <%= form.label :real_age %><br />
-    <%= form.text_field :real_age %>
-</p><br />
-<p>
-    <%= form.label :height %><br />
-    <%= form.text_field :height %>
-</p><br />
-<p>
-    <%= form.label :weight %><br />
-    <%= form.text_field :weight %>
-</p><br />
-<p>
-    <%= form.label :xp %><br />
-    <%= form.text_field :xp %>
-</p><br />
-<p>
-    <%= form.label :hp %><br />
-    <%= form.text_field :hp %>
-</p><br />
-<p>
-    <%= form.label :race %><br />
-    <%= form.text_field :race %>
-</p><br />
-<p>
-    <%= form.label :backstory %><br />
-    <%= form.text_area :backstory %>
-</p><br />
-<p>
-    <%= form.label :appearance %><br />
-    <%= form.text_field :appearance %>
-</p><br />
-<p>
-    <%= form.label :personality_traits %><br />
-    <%= form.text_area :personality_traits %>
-</p><br />
-<p>
-    <%= form.label :ideals %><br />
-    <%= form.text_area :ideals %>
-</p><br />
-<p>
-    <%= form.label :bonds %><br />
-    <%= form.text_area :bonds %>
-</p><br />
-<p>
-    <%= form.label :flaws %><br />
-    <%= form.text_area :flaws %>
-</p><br />
-<p>
-    <%= form.label :charater_class %><br />
-    <%= form.text_field :character_class %>
-</p><br />
-<p>
-    <%= form.label :background %><br />
-    <%= form.text_area :background %>
-</p><br />
+<div class="container">
+    <div class="general">
+        <h3>General</h3>
+        <p>
+            <%= form.text_field :name, placeholder: "Name" %>
+        </p><br />
+        <p>
+            <%= form.text_field :level, placeholder: "level" %>
+        </p><br />
+        <p>
+            <%= form.text_field :race, placeholder: "race" %>
+        </p><br />
+        <p>
+            <%= form.text_field :character_class, placeholder: "class" %>
+        </p><br />
+        <p>
+            <%= form.text_field :gender, placeholder: "gender" %>
+        </p><br />
+        <p>
+            <%= form.text_field :alignment, placeholder: "alignment" %>
+        </p><br />
+        <p>
+            <%= form.text_field :real_age, placeholder: "real age" %>
+        </p><br />
+        <p>
+            <%= form.text_field :height, placeholder: "height" %>
+        </p><br />
+        <p>
+            <%= form.text_field :weight, placeholder: "weight" %>
+        </p><br />
+        <p>
+            <%= form.text_field :xp, placeholder: "XP" %>
+        </p><br />
+        <p>
+            <%= form.text_field :hp, placeholder: "HP" %>
+        </p><br />
+    </div>
 
-<!--scoring ability
-    (strength, dexterity, constitution,
-    intelligence, wisdom, charisma)
-    6 scores customized by user default at 10
-    with additional 12 points to utilize
-    can add and subtract from default value
-    race bonus is possible
-    show final score of each
-    cost to increase score increases
-    specific to how many times said specific score
-    is increased (costs more points to upgrade
-    already upgraded scores)
 
-    work on later, something crude for now
+    <div class="resources">
+        <h3>Resources</h3>
+        <p>
+            <%= form.text_field :background_tools1, placeholder: "background Tool(1)" %>
+        </p><br />
+        <p>
+            <%= form.text_field :background_tools2, placeholder: "background Tool(2)" %>
+        </p><br />
+        <p>
+            <%= form.text_field :race_languages, placeholder: "race languages" %>
+        </p><br />
+        <p>
+            <%= form.text_field :fighting_style, placeholder: "fighting style" %>
+        </p><br />
+        <p>
+            <%= form.text_field :starter_pack, placeholder: "starter pack" %>
+        </p><br />
+        <p>
+            <%= form.text_field :background_specialty, placeholder: "background specialty" %>
+        </p><br />
+        <p>
+            <%= form.text_area :known_spells, placeholder: "known spells" %>
+        </p><br />
+        <!-- leave room for indepth additions for equipment
+        (Armors, Weapons, Tools, Money, Treasures &
+        Magic Items, Equipment, Particularities)-->
+    </div>
+</div>
+
+<h3><u>Details</u></h3>
+<div class="container">
+    <div class="general">
+        <p>
+            <%= form.label :appearance %><br />
+            <%= form.text_field :appearance %>
+        </p><br />
+        <p>
+            <%= form.label :ideals %><br />
+            <%= form.text_area :ideals %>
+        </p><br />
+        <p>
+            <%= form.label :bonds %><br />
+            <%= form.text_area :bonds %>
+        </p><br />
+        <p>
+            <%= form.label :flaws %><br />
+            <%= form.text_area :flaws %>
+        </p><br />
+
+        <p>
+            <%= form.label :best_ability %><br />
+            <%= form.text_field :best_ability %>
+        </p><br />
+    </div>
+
+    <div class="resources">
+        <p>
+            <%= form.label :class_feature %><br />
+            <%= form.text_field :class_feature %>
+        </p><br />
+        <p>
+            <%= form.label :class_skill1 %><br />
+            <%= form.text_field :class_skill1 %>
+        </p><br />
+        <p>
+            <%= form.label :class_skill2 %><br />
+            <%= form.text_field :class_skill2 %>
+        </p><br />
+        <p>
+            <%= form.label :background_skill %><br />
+            <%= form.text_field :background_skill %>
+        </p><br />
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="general">
+        <p>
+            <%= form.label :backstory %><br />
+            <%= form.text_area :backstory %>
+        </p><br />
+
+
+        <p>
+            <%= form.label :personality_traits %><br />
+            <%= form.text_area :personality_traits %>
+        </p><br />
+
+        <p>
+            <%= form.label :background %><br />
+            <%= form.text_area :background %>
+        </p><br />
+    </div>
+
+    <!--scoring ability
+        (strength, dexterity, constitution,
+        intelligence, wisdom, charisma)
+        6 scores customized by user default at 10
+        with additional 12 points to utilize
+        can add and subtract from default value
+        race bonus is possible
+        show final score of each
+        cost to increase score increases
+        specific to how many times said specific score
+        is increased (costs more points to upgrade
+        already upgraded scores)
+
+        work on later, something crude for now
     -->
-<p>
-    <%= form.label :best_ability %><br />
-    <%= form.text_field :best_ability %>
-</p><br />
-<p>
-    <%= form.label :class_feature %><br />
-    <%= form.text_field :class_feature %>
-</p><br />
-<p>
-    <%= form.label :class_skill1 %><br />
-    <%= form.text_field :class_skill1 %>
-</p><br />
-<p>
-    <%= form.label :class_skill2 %><br />
-    <%= form.text_field :class_skill2 %>
-</p><br />
-<p>
-    <%= form.label :background_skill %><br />
-    <%= form.text_field :background_skill %>
-</p><br />
-<p>
-    <%= form.label :background_tools1 %><br />
-    <%= form.text_field :background_tools1 %>
-</p><br />
-<p>
-    <%= form.label :background_tools2 %><br />
-    <%= form.text_field :background_tools2 %>
-</p><br />
-<p>
-    <%= form.label :race_languages %><br />
-    <%= form.text_field :race_languages %>
-</p><br />
-<p>
-    <%= form.label :fighting_style %><br />
-    <%= form.text_field :fighting_style %>
-</p><br />
-<p>
-    <%= form.label :starter_pack %><br />
-    <%= form.text_field :starter_pack %>
-</p><br />
-<p>
-    <%= form.label :background_specialty %><br />
-    <%= form.text_field :background_specialty %>
-</p><br />
-<p>
-    <%= form.label :known_spells %><br />
-    <%= form.text_field :known_spells %>
-</p><br />
-<!-- leave room for indepth additions for equipment
-    (Armors, Weapons, Tools, Money, Treasures &
-    Magic Items, Equipment, Particularities)-->
-	<%= form.submit %>
-<% end %>
+</div>
+
+<div style="text-align:center;">
+    <%= form.submit %>
+</div>
+    <% end %>

@@ -1,25 +1,28 @@
+<!-- general layout, importing basic & header/footer stylings for all pages -->
+
 <!DOCTYPE html>
+<%= stylesheet_link_tag "headerfooter" %>
+<%= stylesheet_link_tag "basics" %>
+
 <html>
-  <head>
+<head>
     <title>DungeonsAndDragons</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-      <div class="content">
-          <div class="row">
-              <div class="col-md-2">
-              </div>
-          </div>
-      </div>
-      <%= yield %>
+<body>
+    <header>
+        <h2><strong>D&D Resources</strong></h2>
+    </header>
+    
+    <%= yield %>
 
-      <footer><%= link_to "Home", root_path %></footer>
-  </body>
+    <footer><%= link_to "Home", root_path %></footer>
+</body>
 
-  
+
 </html>

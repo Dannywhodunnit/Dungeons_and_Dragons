@@ -1,0 +1,79 @@
+/* stylings for grouping sections of the form into smaller bits*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgba(0,0,139, 0.3);
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: rgba(0,0,139, 0.3);
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 15px;
+    background-color: rgba(0,0,139, 0.3);
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgba(0,0,139, 0.5 );
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: rgba(0,0,139, 0.5 );
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+bottom {
+    display: flex;
+}
+   
+button {
+    display:block;
+    margin: 0 auto;
+}
+
+/*
+@media (max-width 900px){
+    .container{
+        justify-content: center;
+        flex-flow: column;
+    }
+
+}*/

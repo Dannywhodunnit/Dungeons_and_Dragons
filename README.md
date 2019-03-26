@@ -1,6 +1,9 @@
 # README
 
-This is a character creator for Dungeons and Dragons. Fill out the form to create or update, delete, or look up characters created.
+-This is a character creator for Dungeons and Dragons!
+-Fill out the form to create or update, delete, or look up characters created.
+-Includes project-wide header and footer (with Home page link)
+-
 
 
 

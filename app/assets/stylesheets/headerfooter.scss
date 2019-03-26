@@ -1,9 +1,7 @@
 header, footer {
-    border: 20px solid #800000;
+    border: 10px solid;
     clear: both;
     display: block;
-    margin: 5px 0;
-    padding: 5px 10px;
 }
 
 header {
@@ -11,18 +9,27 @@ header {
     margin-left: -8px;
     margin-right: -8px;
     text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-color: #800000;
+    background-color: #800000;
+    color: gold;
 }
 
 footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 10%;
     height: auto;
+    float: right;
     text-align: center;
-    background-color: #800000;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: large;
+    border-radius: 25px 35px;
+    background-color: lawngreen;
+    border-color: lawngreen;
+ 
     }
 
 

@@ -1,43 +1,54 @@
-<%= stylesheet_link_tag "headerfooter" %>
+<!-- character page -->
+<%= stylesheet_link_tag "form" %>
+
+<h1><strong><u><%= @character.name%></u></strong></h1>
+
+<div class="container">
+    <div class="general">
+        <h3><b><u>General</u></b></h3>
+            <ul>
+                <li><b><u>Level:</u></b> <%= @character.level %></li>
+                <li><b><u>Race:</u></b> <%= @character.race %></li>
+                <li><b><u>Class:</u></b> <%= @character.character_class %></li>
+                <li><b><u>Gender:</u></b> <%= @character.gender %></li>
+                <li><b><u>Alignment:</u></b> <%= @character.alignment %></li>
+                <li><b><u>Real Age:</u></b> <%= @character.real_age %></li>
+                <li><b><u>Height:</u></b> <%= @character.height %></li>
+                <li><b><u>Weight:</u></b> <%= @character.weight %></li>
+                <li><b><u>XP:</u></b> <%= @character.xp %></li>
+                <li><b><u>HP:</u></b> <%= @character.hp %></li>
+            </ul>
+    </div>
 
 
-<h1><%= @character.name%></h1>
-<h3><b><u>General</u></b></h3>
-<ul>
+    <div class="resources">
+        <h3><b><u>Resources</u></b></h3>
+            <ul>
+                <li><b><u>Background Tools 1:</u></b> <%= @character.background_tools1 %></li>
+                <li><b><u>Background Tools 2:</u></b> <%= @character.background_tools2 %></li>
+                <li><b><u>Race Languages:</u></b> <%= @character.race_languages %></li>
+                <li><b><u>Fighting Style:</u></b> <%= @character.fighting_style %></li>
+                <li><b><u>Starter Pack:</u></b> <%= @character.starter_pack %></li>
+                <li><b><u>Background Specialty:</u></b> <%= @character.background_specialty %></li>
+                <li><b><u>Known Spells:</u></b> <%= @character.known_spells %></li>
+            </ul>
+    </div>
 
-    <li><b><u>Level:</u></b> <%= @character.level %></li>
-    <li><b><u>Race:</u></b> <%= @character.race %></li>
-    <li><b><u>Class:</u></b> <%= @character.character_class %></li>
-    <li><b><u>Gender:</u></b> <%= @character.gender %></li>
-    <li><b><u>Alignment:</u></b> <%= @character.alignment %></li>
-    <li><b><u>Real Age:</u></b> <%= @character.real_age %></li>
-    <li><b><u>Height:</u></b> <%= @character.height %></li>
-    <li><b><u>Weight:</u></b> <%= @character.weight %></li>
-    <li><b><u>XP:</u></b> <%= @character.xp %></li>
-    <li><b><u>HP:</u></b> <%= @character.hp %></li>
-</ul>
-
-<h3><b><u>Details</u></b></h3>
-
-<li><b><u>Backstory:</u></b> <%= @character.backstory %></li>
-<li><b><u>Appearance:</u></b> <%= @character.appearance %></li>
-<li><b><u>Personality Traits:</u></b> <%= @character.personality_traits %></li>
-<li><b><u>Ideals:</u></b> <%= @character.ideals %></li>
-<li><b><u>Flaws:</u></b> <%= @character.flaws %></li>
-<li><b><u>Bonds:</u></b> <%= @character.bonds %></li>
-<li><b><u>Background:</u></b> <%= @character.background %></li>
-<li><b><u>Best Ability:</u></b> <%= @character.best_ability %></li>
-<li><b><u>Class Feature:</u></b> <%= @character.class_feature %></li>
-<li><b><u>Class Skill 1:</u></b> <%= @character.class_skill1 %></li>
-<li><b><u>Class Skill 2:</u></b> <%= @character.class_skill2 %></li>
-<li><b><u>Background Skill:</u></b> <%= @character.background_skill %></li>
-
-<h3><b><u>Resources</u></b></h3>
-
-<li><b><u>Background Tools 1:</u></b> <%= @character.background_tools1 %></li>
-<li><b><u>Background Tools 2:</u></b> <%= @character.background_tools2 %></li>
-<li><b><u>Race Languages:</u></b> <%= @character.race_languages %></li>
-<li><b><u>Fighting Style:</u></b> <%= @character.fighting_style %></li>
-<li><b><u>Starter Pack:</u></b> <%= @character.starter_pack %></li>
-<li><b><u>Background Specialty:</u></b> <%= @character.background_specialty %></li>
-<li><b><u>Known Spells:</u></b> <%= @character.known_spells %></li>
+    <div class="details">
+        <h3><b><u>Details</u></b></h3>
+            <ul>
+                <li><b><u>Backstory:</u></b> <%= @character.backstory %></li>
+                <li><b><u>Appearance:</u></b> <%= @character.appearance %></li>
+                <li><b><u>Personality Traits:</u></b> <%= @character.personality_traits %></li>
+                <li><b><u>Ideals:</u></b> <%= @character.ideals %></li>
+                <li><b><u>Flaws:</u></b> <%= @character.flaws %></li>
+                <li><b><u>Bonds:</u></b> <%= @character.bonds %></li>
+                <li><b><u>Background:</u></b> <%= @character.background %></li>
+                <li><b><u>Best Ability:</u></b> <%= @character.best_ability %></li>
+                <li><b><u>Class Feature:</u></b> <%= @character.class_feature %></li>
+                <li><b><u>Class Skill 1:</u></b> <%= @character.class_skill1 %></li>
+                <li><b><u>Class Skill 2:</u></b> <%= @character.class_skill2 %></li>
+                <li><b><u>Background Skill:</u></b> <%= @character.background_skill %></li>
+            </ul>
+    </div>
+</div>
